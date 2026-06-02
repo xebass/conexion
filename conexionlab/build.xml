@@ -71,3 +71,24 @@
 
     -->
 </project>
+
+
+
+
+
+
+
+int fila = tblConsolas.getSelectedRow();
+
+    if (fila >= 0) {
+        // Guardamos el ID en la variable global para usarlo al Modificar/Eliminar
+        idConsolaSeleccionada = Integer.parseInt(tblConsolas.getValueAt(fila, 0).toString());
+        
+        // Pasamos los valores de la fila a las cajas de texto
+        txtIdConsola.setText(tblConsolas.getValueAt(fila, 0).toString());
+        txtNombre.setText(tblConsolas.getValueAt(fila, 1).toString());
+        txtFabricante.setText(tblConsolas.getValueAt(fila, 2).toString());
+        txtEdicion.setText(tblConsolas.getValueAt(fila, 3).toString());
+        txtAnio.setText(tblConsolas.getValueAt(fila, 4).toString());
+    }
+}
